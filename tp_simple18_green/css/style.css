@@ -279,6 +279,57 @@ main p {
 	width: 22%;						/*幅。１行に何個配置したいか、ここの数値を変更してお好みで調整して下さい。*/
 }
 
+.accordion-003 {
+    max-width: 1000px;
+    margin-bottom: 7px;
+    border-bottom: 2px solid #794c4292;
+}
+
+.accordion-003 summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 1em 2em;
+    color: #606060;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.accordion-003 summary::-webkit-details-marker {
+    display: none;
+}
+
+.accordion-003 summary::after {
+    transform: translateY(-25%) rotate(45deg);
+    width: 7px;
+    height: 7px;
+    margin-left: 10px;
+    border-bottom: 3px solid #777;
+    border-right: 3px solid #777;
+    content: '';
+    transition: transform .3s;
+}
+
+.accordion-003[open] summary::after {
+    transform: rotate(225deg);
+}
+
+.accordion-003 p {
+    transform: translateY(-10px);
+    opacity: 0;
+    margin: 0;
+    padding: .3em 2em 1.5em;
+    color: #606060;
+	font-weight: lighter;
+    transition: transform .5s, opacity .5s;
+}
+
+.accordion-003[open] p {
+    transform: none;
+    opacity: 1;
+}
+
 
 /*「お知らせ」ブロック
 ---------------------------------------------------------------------------*/
