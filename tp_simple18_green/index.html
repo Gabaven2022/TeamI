@@ -21,7 +21,7 @@
 <li><a href="#about">About</a></li>
 <li><a href="#gallery">Gallery</a></li>
 <li><a href="#link">Link</a></li>
-<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+<!-- <li><a href="#"><i class="fab fa-instagram"></i></a></li> は使用しない-->
 </ul>
 </nav>
 
@@ -348,5 +348,20 @@ cssフォルダのstyle.css冒頭で読み込んでいる「Font Awesomeの読�
 <!--ページの上部へ戻るボタン-->
 <div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
 
+<footer>
+    <!-- 広告 -->
+    <script>
+        num = 3;  //広告の数
+        r = Math.floor(Math.random()*num);
+        link = new Array(); //広告のリンクを格納する配列
+        
+        link[0] = "https://www.youtube.com/watch?v=KY7V2HUhRS8&list=PL_h46lFr5PBicEnCVh4A6w4LoNzYmTxzL&index=7"; //～1.pngのリンク先
+        link[1] = "https://www.youtube.com/watch?v=2qS9AUKNF0s"; //～2.pngのリンク先
+        link[2] = "https://www.youtube.com/watch?v=tkCU0n8hvBU"; //～3.pngのリンク先
+    
+        document.write('<a href="'+link[r]+'"><picture class="floating-banner"><source srcset="images/'+(r+101)+'.png" media="(min-width: 990px)"/><img class="floating-banner__image" src="images/'+(r+201)+'.png" alt="広告"></picture></a>')
+    </script>
+    </footer>
 </body>
+
 </html>
