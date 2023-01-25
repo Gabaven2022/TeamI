@@ -295,13 +295,14 @@
         r = Math.floor(Math.random()*num);
         link = new Array(); //広告のリンクを格納する配列
         
-        link[0] = "https://www.youtube.com/watch?v=KY7V2HUhRS8&list=PL_h46lFr5PBicEnCVh4A6w4LoNzYmTxzL&index=7"; //～1.pngのリンク先
-        link[1] = "https://www.youtube.com/watch?v=2qS9AUKNF0s"; //～2.pngのリンク先
-        link[2] = "https://www.youtube.com/watch?v=tkCU0n8hvBU"; //～3.pngのリンク先
-    
+        link[0] = ""; //～1.pngのリンク先
+        link[1] = ""; //～2.pngのリンク先
+        link[2] = ""; //～3.pngのリンク先
+
+        // (r+101)はパソコン用の画像、(r+201)はスマホ・タブレット用の画像
         document.write('<a href="'+link[r]+'"><picture class="floating-banner"><source srcset="images/'+(r+101)+'.png" media="(min-width: 990px)"/><img class="floating-banner__image" src="images/'+(r+201)+'.png" alt="広告"></picture></a>')
     </script>
-    </footer>
+</footer>
 </body>
 
 </html>
