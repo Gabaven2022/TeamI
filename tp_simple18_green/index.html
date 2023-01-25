@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>佐大生 メンタルヘルスケア サポートサイト</title>
+<title>佐賀大学 メンタルヘルスケア サポートサイト</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="佐賀大学生向けの、メンタルヘルスケアをサポートするサイトです。">
 <link rel="stylesheet" href="css/style.css">
@@ -21,7 +21,7 @@
 <li><a href="#about">About</a></li>
 <li><a href="#selfcare">Self Care</a></li>
 <li><a href="#link">Link</a></li>
-<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+<!-- <li><a href="#"><i class="fab fa-instagram"></i></a></li> は使用しない-->
 </ul>
 </nav>
 
@@ -299,7 +299,7 @@ cssフォルダのstyle.css冒頭で読み込んでいる「Font Awesomeの読�
         筋肉をゆっくり伸ばすストレッチは、筋肉の緊張をゆるめ、血行を促し、心身のリラックスに効果的です。</p>
 </details>
 
-<p>参考：厚生労働省. 「心もメンテしよう」.https://www.mhlw.go.jp/kokoro/youth/stress/self/index.html , (2023-1-24).</p>
+<p>参考：厚生労働省. 「心もメンテしよう」.https://www.mhlw.go.jp/kokoro/youth/stress/self/index.html , (2023-1-24)</p>
 
 </section>
 
@@ -357,5 +357,20 @@ cssフォルダのstyle.css冒頭で読み込んでいる「Font Awesomeの読�
 <!--ページの上部へ戻るボタン-->
 <div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
 
+<footer>
+    <!-- 広告 -->
+    <script>
+        num = 3;  //広告の数
+        r = Math.floor(Math.random()*num);
+        link = new Array(); //広告のリンクを格納する配列
+        
+        link[0] = "https://www.youtube.com/watch?v=KY7V2HUhRS8&list=PL_h46lFr5PBicEnCVh4A6w4LoNzYmTxzL&index=7"; //～1.pngのリンク先
+        link[1] = "https://www.youtube.com/watch?v=2qS9AUKNF0s"; //～2.pngのリンク先
+        link[2] = "https://www.youtube.com/watch?v=tkCU0n8hvBU"; //～3.pngのリンク先
+    
+        document.write('<a href="'+link[r]+'"><picture class="floating-banner"><source srcset="images/'+(r+101)+'.png" media="(min-width: 990px)"/><img class="floating-banner__image" src="images/'+(r+201)+'.png" alt="広告"></picture></a>')
+    </script>
+    </footer>
 </body>
+
 </html>

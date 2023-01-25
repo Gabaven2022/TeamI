@@ -162,15 +162,15 @@ header #logo img {
 	line-height: 80px;	/*高さ*/
 }
 
-/*４つ目のメニュー(Instagram)*/
-#menubar li:nth-of-type(4) {
+/*４つ目のメニュー(Instagram)* は使用しないためコメント化/
+/* #menubar li:nth-of-type(4) {
 	left: 8%;			/*ウィンドウに対して左からの配置場所*/
-	top: 85%;			/*ウィンドウに対して上からの配置場所*/
-	animation-delay: 0.8s;	/*0.8秒だけ遅れてアニメーションをスタートさせる設定*/
-	background: rgba(138,158,156,0.5);	/*RGBでの背景色指定。最後の0.5は色が50%出た状態のこと。*/
-	width: 70px;		/*幅*/
-	line-height: 70px;	/*高さ*/
-}
+	/* top: 85%;			ウィンドウに対して上からの配置場所 */
+	/* animation-delay: 0.8s;	0.8秒だけ遅れてアニメーションをスタートさせる設定 */
+	/* background: rgba(138,158,156,0.5);	RGBでの背景色指定。最後の0.5は色が50%出た状態のこと。 */
+	/* width: 70px;		幅 */
+	/* line-height: 70px;	高さ */
+/* } */ 
 
 
 /*コンテンツ
@@ -527,7 +527,7 @@ html, body {
 ---------------------------------------------------------------------------*/
 /*ロゴ画像*/
 header #logo img {
-	width: 280px;	/*幅*/
+	width: 200px;	/*幅*/
 	left: 5%;		/*ウィンドウに対して左からの配置場所*/
 }
 
@@ -541,33 +541,33 @@ header #logo img {
 
 /*１つ目のメニュー(About)*/
 #menubar li:nth-of-type(1) {
-	left: 20%;			/*ウィンドウに対して左からの配置場所*/
-	top: 27%;			/*ウィンドウに対して上からの配置場所*/
-	width: 150px;		/*幅*/
-	line-height: 150px;	/*高さ*/
-}
-
-/*２つ目のメニュー(Gallery)*/
-#menubar li:nth-of-type(2) {
-	left: 4%;			/*ウィンドウに対して左からの配置場所*/
-	top: 45%;			/*ウィンドウに対して上からの配置場所*/
-	width: 190px;		/*幅*/
-	line-height: 190px;	/*高さ*/
-}
-
-/*３つ目のメニュー(Link)*/
-#menubar li:nth-of-type(3) {
-	left: 18%;			/*ウィンドウに対して左からの配置場所*/
-	top: 65%;			/*ウィンドウに対して上からの配置場所*/
+	left: 13%;			/*ウィンドウに対して左からの配置場所*/
+	top: 20%;			/*ウィンドウに対して上からの配置場所*/
 	width: 130px;		/*幅*/
 	line-height: 130px;	/*高さ*/
 }
 
-/*４つ目のメニュー(Instagram)*/
-#menubar li:nth-of-type(4) {
-	left: 7%;			/*ウィンドウに対して左からの配置場所*/
-	top: 80%;			/*ウィンドウに対して上からの配置場所*/
+/*２つ目のメニュー(Gallery)*/
+#menubar li:nth-of-type(2) {
+	left: 6%;			/*ウィンドウに対して左からの配置場所*/
+	top: 33%;			/*ウィンドウに対して上からの配置場所*/
+	width: 150px;		/*幅*/
+	line-height: 150px;	/*高さ*/
 }
+
+/*３つ目のメニュー(Link)*/
+#menubar li:nth-of-type(3) {
+	left: 15%;			/*ウィンドウに対して左からの配置場所*/
+	top: 46%;			/*ウィンドウに対して上からの配置場所*/
+	width: 100px;		/*幅*/
+	line-height: 100px;	/*高さ*/
+}
+
+/*４つ目のメニュー(Instagram)* は使わないためコメント化/
+/*#menubar li:nth-of-type(4) {
+	left: 7%;			/*ウィンドウに対して左からの配置場所*/
+	/*top: 80%;			/*ウィンドウに対して上からの配置場所*/
+/*}
 
 
 /*コンテンツ
@@ -634,6 +634,89 @@ header #logo img {
 /*その他
 ---------------------------------------------------------------------------*/
 .ws {width: 48%;display: inline;}
+
+/*その他と主な共通部分は省略*/
+
+/*まずはお決まりのボックスサイズ算出をborer-boxに */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;/*rem算出をしやすくするために*/
+}
+
+.btn,
+a.btn,
+button.btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+}
+a.btn--orange {
+	color: #fff;
+	background-color: #eb6100;
+  }
+  
+  a.btn--orange:hover {
+	color: #fff;
+	background: #f56500;
+  }
+  
+  a.btn-c {
+	font-size: 1.8rem;
+	position: relative;
+	padding: 1.5rem 2rem 1.5rem 2rem;
+	border-radius: 100vh;
+  }
+  
+  a.btn-c i.fa {
+	margin-right: 1rem;
+  }
+
+  /* 広告 */
+.floating-banner {
+	position: fixed; /* バナーを追従させる */
+	z-index: 99999; /* 他の要素の下に隠れないように */
+	bottom: 0; /* バナーの上下の位置 */
+	left: 0; /* バナーの左右の位置 */
+	width: 300px; /* バナーの横幅 */
+  }
+  .floating-banner__image {
+	max-width: 100%; /* 画像の最大幅 */
+  }
+  @media screen and (max-width: 990px) { /* タブレット用のブレイクポイントを指定 */
+	.floating-banner {
+	  display: none; /* タブレットサイズ以下でPC用のバナーを非表示に */
+	}
+  }
+  @media screen and (max-width: 560px) { /* スマホ用のブレイクポイントを指定 */
+	.floating-banner {
+	  display: block;/* 消していたバナーを表示させる */
+	  width: 100vw; /* スマホの画面幅いっぱいにバナーを表示 */
+	}
+  }
 
 
 /*　※注意！　下の閉じカッコ　}　はこのブロックに必要なので、削除しないで下さい。　*/
